@@ -1,0 +1,16 @@
+services:
+  shideo:
+    build:
+      context: .
+      dockerfile: Shideo.Dockerfile
+    container_name: shideo
+    volumes:
+      - ..:/workspaces:cached
+
+  pocketbase:
+    build:
+      context: .
+      dockerfile: Pocketbase.Dockerfile
+    container_name: pocketbase
+    ports:
+      - "8080:8080"
