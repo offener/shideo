@@ -6,6 +6,8 @@ services:
     container_name: shideo
     volumes:
       - ..:/workspaces:cached
+    ports:
+      - "5173:5173"
 
   pocketbase:
     build:
