@@ -2,6 +2,9 @@ FROM alpine:latest
 
 ARG PB_VERSION=0.28.4
 
+ENV PB_ADMIN_EMAIL=admin@admin.com
+ENV PB_ADMIN_PASSWORD=admin
+
 RUN apk add --no-cache \
     unzip \
     ca-certificates
